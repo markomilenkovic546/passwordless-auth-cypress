@@ -20,7 +20,7 @@ describe('signup logic', () => {
         signupPage.signupModal.continueWithEmailButton().click();
         cy.url().should('include', `enter-code?email=${user.email}`);
         // Handle code validation
-        cy.extractOneTimeCode(user.email).then((code) => {
+        cy.extractSignupOneTimeCode(user.email).then((code) => {
             codeValidationPage.codeInputField().type(code);
             // Verify that user is redirected to the 'Tracker' page
             cy.url().should('include', '/tracker');
@@ -42,7 +42,7 @@ describe('signup logic', () => {
         signupPage.signupModal.continueWithEmailButton().click();
         cy.url().should('include', `enter-code?email=${user.email}`);
         // Handle signup verification
-        cy.handleMagicLink(user.email);
+        cy.handleSignupMagicLink(user.email);
         // Verify that user is redirected to the 'Tracker' page
         cy.url().should('include', '/tracker');
         // Verify that default workspace named by username is created and active

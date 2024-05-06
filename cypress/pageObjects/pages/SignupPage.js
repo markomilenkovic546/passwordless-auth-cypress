@@ -28,7 +28,7 @@ class SignupPage extends BasePage {
         this.signupModal.continueWithEmailButton().click();
         cy.url().should('include', `enter-code?email=${email}`);
         // Handle signup verification
-        cy.handleMagicLink(email);
+        cy.handleSignupMagicLink(email);
         // Verify that user is redirected to the 'Tracker' page
         cy.url().should('include', '/tracker')
     }
