@@ -1,4 +1,4 @@
-## Introduction 📖
+## Project description 📖
 
 This project demonstrates a solution for automation the testing of the signup and login features of an application that utilizes passwordless authentication methods, such as magic links or OTPs sent via email. This solution provides access to email inboxes via the third-party service 'mailsac.com,' avoiding the need to access inboxes via a browser. I used 'Clockify' as an example of the application under test.
 
@@ -23,7 +23,6 @@ pnpm install
 npm run e2e-prod:chrome
 npm run e2e-prod:edge
 npm run e2e-prod:firefox
-
 # or
 pnpm run e2e-prod:chrome
 pnpm run e2e-prod:edge
