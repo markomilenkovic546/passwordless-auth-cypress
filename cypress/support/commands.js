@@ -1,7 +1,7 @@
 // Get OTP email message using Mailsac service, extract url and navigate to it to complete signup process
 Cypress.Commands.add('handleSignupMagicLink', (email, attempts = 3) => {
     if (attempts === 0) {
-        throw new Error('Inbox is empty');
+        throw new Error('Email is not received');
     }
     // Wait email to be sent
     cy.wait(3000);
@@ -28,7 +28,7 @@ Cypress.Commands.add('handleSignupMagicLink', (email, attempts = 3) => {
 // Get OTP email message using Mailsac service, extract url and navigate to it to complete login process
 Cypress.Commands.add('handleLoginMagicLink', (email, attempts = 3) => {
     if (attempts === 0) {
-        throw new Error('Inbox is empty');
+        throw new Error('Email is not received');
     }
     // Wait email to be sent
     cy.wait(3000);
@@ -55,7 +55,7 @@ Cypress.Commands.add('handleLoginMagicLink', (email, attempts = 3) => {
 // Get OTP email message using Mailsac service and extract one-time-code
 Cypress.Commands.add('extractLoginOneTimeCode', (email, attempts = 3) => {
     if (attempts === 0) {
-        throw new Error('Inbox is empty');
+        throw new Error('Email is not received');
     }
     // Wait for the email to be sent, then make the request to fetch messages
     cy.wait(3000);
@@ -87,7 +87,7 @@ Cypress.Commands.add('extractLoginOneTimeCode', (email, attempts = 3) => {
 // Get OTP email message using Mailsac service and extract one-time-code
 Cypress.Commands.add('extractSignupOneTimeCode', (email, attempts = 3) => {
     if (attempts === 0) {
-        throw new Error('Inbox is empty');
+        throw new Error('Email is not received');
     }
     // Wait for the email to be sent, then make the request to fetch messages
     cy.wait(3000);
