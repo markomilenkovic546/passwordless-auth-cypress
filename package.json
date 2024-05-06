@@ -1,0 +1,21 @@
+{
+    "name": "otp-auth-cypress",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "e2e:chrome": "cypress run --spec cypress/specs --browser chrome --config-file prod.config.js",
+        "e2e:edge": "cypress run --spec cypress/specs --browser edge --config-file prod.config.js",
+        "e2e:firefox": "cypress run --spec cypress/specs --browser firefox --config-file prod.config.js"
+    },
+    "keywords": [],
+    "author": "Marko Milenkovic",
+    "license": "ISC",
+    "dependencies": {
+        "cypress": "13.8.1",
+        "cypress-mochawesome-reporter": "^3.7.0",
+        "dotenv": "^16.4.5",
+        "prettier": "^3.2.5",
+        "@faker-js/faker": "^8.4.1"
+    }
+}
