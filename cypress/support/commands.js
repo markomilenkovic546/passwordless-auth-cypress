@@ -25,7 +25,7 @@ Cypress.Commands.add('handleSignupMagicLink', (email, attempts = 3) => {
     });
 });
 
-// Get OTP email message using Mailsac service, extract url and navigate to it to complete signup process
+// Get OTP email message using Mailsac service, extract url and navigate to it to complete login process
 Cypress.Commands.add('handleLoginMagicLink', (email, attempts = 3) => {
     if (attempts === 0) {
         throw new Error('Inbox is empty');
