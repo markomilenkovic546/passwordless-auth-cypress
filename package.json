@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "e2e:chrome": "cypress run --spec cypress/specs --browser chrome --config-file prod.config.js",
-        "e2e:edge": "cypress run --spec cypress/specs --browser edge --config-file prod.config.js",
-        "e2e:firefox": "cypress run --spec cypress/specs --browser firefox --config-file prod.config.js"
+        "e2e-prod:chrome": "cypress run --spec cypress/specs --browser chrome --config-file prod.config.js",
+        "e2e-prod:edge": "cypress run --spec cypress/specs --browser edge --config-file prod.config.js",
+        "e2e-prod:firefox": "cypress run --spec cypress/specs --browser firefox --config-file prod.config.js"
     },
     "keywords": [],
     "author": "Marko Milenkovic",
