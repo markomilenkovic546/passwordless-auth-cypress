@@ -1,6 +1,6 @@
 ## Project description 📖
 
-This project demonstrates a solution for automation testing of the signup and login features of an application that utilizes passwordless authentication methods, such as magic link or OTP sent via email. This solution provides access to email inboxes via the third-party service 'mailsac.com,' avoiding the need to access inboxes via a browser. I used 'Clockify' as an example of the application under test.
+This project demonstrates a solution for automation testing of the signup and login features of an application that utilizes passwordless authentication methods, such as magic link or OTP sent via email. This solution provides access to email inboxes via the third-party service 'mailsac.com' avoiding the need to access inboxes via a browser. I used 'Clockify' as an example of the application under test.
 
 Access to the email inbox via `mailsac.com` API is facilitated by creating an account on `mailsac.com` and obtaining an API key, which must be attached in the HTTP request header to retrieve the contents of any email inbox associated with the mailsac.com domain. The content of the email inbox is returned by the server in JSON format. The logic pertaining to interaction with the mailsac.com service and extraction of email content has been abstracted into Cypress custom commands, located in `cypress/support/commands.js`.
 
